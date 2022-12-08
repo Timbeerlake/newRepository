@@ -14,13 +14,17 @@ console.log(number());
 // const ask = +prompt("Угадайте число от 1 до 100")
 const game = function(n){
     n = +prompt("Угадайте число от 1 до 100")
-    if (n == " " || n == null ) {
-        +prompt("Угадайте число от 1 до 100")
+    if (n == "" || n == null ) {
+        alert("введите число !!!")
         game(n)
-    } else if(n > number()) {
-        alert("ваше число больше загаданного"); continue
-    } else if (n < number()) {
+    }  if(n > number()) {
+        alert("ваше число больше загаданного"); 
+        game(n)
+    }  if (n < number()) {
         alert("ваше число меньше загаданного") ;
+        game(n)
+    } if (n === number()) {
+        alert("Ура вы победили!!!")
     }
 }
  game()
