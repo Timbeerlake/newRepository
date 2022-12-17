@@ -6,6 +6,8 @@ const book2 = document.querySelectorAll(".book")[5]
 const ul = book2.querySelectorAll('li')
 const book3 = document.querySelectorAll(".book")[2]
 const ul2 = book3.querySelectorAll('li')
+const book1 = document.querySelectorAll(".book")[0]
+const ul3 = book1.querySelectorAll("li")
 
 const newLi = document.createElement("li")
 newLi.textContent = "Глава 8: За пределами ES6";
@@ -28,6 +30,8 @@ console.dir(book2)
 console.dir(ul2)
 console.log(newLi)
 
+console.log(ul3)
+
 
 book[0].replaceWith(book[1])
 book[2].replaceWith(book[0])
@@ -39,6 +43,11 @@ ul[2].before(ul[9])
 ul[5].before(ul[2])
 ul[8].before(ul[5])
 ul2[8].append(newLi)
+
+ul3[9].append(ul3[2])
+ul3[8].append(ul3[4])
+ul3[8].append(ul3[5])
+ul3[8].append(ul3[7])
 
 
 
